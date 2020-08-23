@@ -1,8 +1,7 @@
-<h1>Here are your Records!, <%= @user.username %></h1>
+<h1>Here are your records <%= @user.username %>!</h1>
     <%@user.records.each do |records|%>
 
     <div>
-
     <%= record.genre%>
     <%= record.artist_name %>
     <%= record.album_name %>
@@ -10,4 +9,4 @@
     </div>
     <% end %>
 
-    <a href='/records/new'>Add yourt Records! </a>
+    <a href='/records/new'>Add your Records! </a>

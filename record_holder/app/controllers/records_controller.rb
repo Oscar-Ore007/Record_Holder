@@ -25,7 +25,7 @@ class RecordsController < ApplicationController
     get '/records/:id' do 
         if logged_in?
             @record = Record.find_by_id(params[:id])
-            erb :'/record/show'
+            erb :'/records/show'
         else 
             redirect '/login'
         end 

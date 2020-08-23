@@ -1,0 +1,16 @@
+<h1>Here is your Record Entry!</h1>
+
+<p>Album Name:<%=@record.album_name%></p>
+<p>Artist Name:<%=@record.artist_name%></p>
+<p>Genre:<%=@record.genre%></p>
+
+
+<form method="POST" action="/records/<%= @record.id %>">
+<input type="hidden" name="_method" value="edit"/>
+<input type="submit" value="Edit"/>
+
+<form method="POST" action="/records/<%= @record.id %>">
+<input type="hidden" name="_method" value="delete"/>
+<input type="submit" value="Delete"/>
+
+</form>
