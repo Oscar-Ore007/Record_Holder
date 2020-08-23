@@ -1,0 +1,13 @@
+<h1>Here are your Records!, <%= @user.username %></h1>
+    <%@user.records.each do |records|%>
+
+    <div>
+
+    <%= record.genre%>
+    <%= record.artist_name %>
+    <%= record.album_name %>
+    <a href="/records/<%=record.id %>/edit">Edit</a>
+    </div>
+    <% end %>
+
+    <a href='/records/new'>Add yourt Records! </a>
