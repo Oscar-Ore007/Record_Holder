@@ -1,0 +1,17 @@
+<h2>Edit Record</h2>
+
+    <form action="/records/<%=@record.id%>" method="POST">
+        <input type="hidden" name="_method" value="patch">
+
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" value="<%= @record.genre %>"/>
+
+        <label for="artist_name">Artist Name:</label>
+        <input type="text" name="artist_name" value="<%= @record.artist_name %>"/>
+
+        <label for="album_name">Album Name:</label>
+        <input type="text" name="album_name" value="<%= @record.album_name %>"/>
+
+        <input type="submit" value="Submit">
+
+        </form>
