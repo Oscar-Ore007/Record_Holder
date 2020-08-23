@@ -81,6 +81,14 @@
     margin-top: 20px;
     padding-top: 20px;
   }
+ .post {
+    padding: 10px;
+    border: solid 2px black;
+  }
+
+  .error {
+    color: red;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -111,5 +119,12 @@
   h2 {
     font-size: 18px;
     line-height: 24px;
+  }
+  .post {
+    border: solid 2px black;
+  }
+
+  .error {
+    color: red;
   }
 }
