@@ -56,7 +56,7 @@ class RecordsController < ApplicationController
                     if @record.update(params)
                         redirect "/records/#{@record.id}/edit"
                     end 
-                    redirect '/albums'
+                    redirect '/records'
                 end
             end 
         else 
