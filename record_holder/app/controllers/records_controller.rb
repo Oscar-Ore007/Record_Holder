@@ -60,7 +60,7 @@ class RecordsController < ApplicationController
                 end
             end 
         else 
-            redirect 'login'
+            redirect '/login'
         end 
     end 
 
