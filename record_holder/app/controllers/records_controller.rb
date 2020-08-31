@@ -18,8 +18,12 @@ class RecordsController < ApplicationController
     end 
 
     post '/records' do 
-        @record = current_user.records.create(params)
+        @record = current_user.records.new(params)
+        if @record.save 
         redirect "/records/#{@record.id}"
+       else 
+        redirect '/records/new'
+       end 
     end 
 
     get '/records/:id' do 
