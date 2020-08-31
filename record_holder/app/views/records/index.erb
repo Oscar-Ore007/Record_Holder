@@ -1,11 +1,12 @@
 <h1>Welcome, <%= current_user.username %></h1>
 <h2> Records </h2>
-
-
+<p>
+<a href='/records/new'>Add a Record to your collection</a>
+</p>
+<ol>
 <%@record.each do |record| %>
      <p><%= record.album_name%><a href='records/ <%= record.id %>'>View Record Info</a></p>
  <br>
  </br>
 <% end %>
-
-<a href='/records/new'>Add a Record to your Collection</a>
+</ol>

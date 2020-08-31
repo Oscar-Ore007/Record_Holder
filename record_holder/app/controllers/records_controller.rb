@@ -54,11 +54,13 @@ class RecordsController < ApplicationController
                 params.delete(:_method)
                 if @record && @record.user == current_user 
                     if @record.update(params)
-                        redirect "/records/#{@record.id}/edit"
-                    end 
-                    redirect '/records'
+                        redirect "/records/#{@record.id}"
+                    else 
+                    redirect "/records/#{@record.id}/edit"
                 end
+                redirect "/records"
             end 
+        end 
         else 
             redirect '/login'
         end 
